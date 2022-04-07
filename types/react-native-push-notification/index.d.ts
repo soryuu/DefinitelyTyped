@@ -169,8 +169,8 @@ export interface PushNotification {
     invokeApp(notification: PushNotificationObject): void;
     getChannels(callback: (channel_ids: string[]) => void): void;
     channelExists(channel_id: string, callback: (exists: boolean) => void): void;
-    createChannel(channel: ChannelObject, callback: (created: boolean) => void): void;
-    channelBlocked(channel_id: string, callback: (blocked: boolean) => void): void;
+    createChannel(channel: ChannelObject, callback?: (created: boolean) => void): void;
+    channelBlocked(channel_id: string, callback?: (blocked: boolean) => void): void;
     deleteChannel(channel_id: string): void;
 }
 
